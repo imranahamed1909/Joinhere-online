@@ -3,7 +3,6 @@ import Image from "next/image";
 import Megapersonals from "../../public/images/megapersonals.png";
 import Cookies from "js-cookie";
 import { useState } from "react";
-import PhotoUpload from "../components/PhotoUpload";
 import { Field, Form, Formik } from "formik";
 import { API_URL } from "../config";
 import { toast } from "react-toastify";
