@@ -39,7 +39,7 @@ function PhotoUpload() {
       router.push("/photoUpload");
     } else {
       console.log("error", data);
-      // toast.error("Something Went Wrong");
+     
     }
   };
   const [state, formAction] = useFormState(addPost);
