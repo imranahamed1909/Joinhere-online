@@ -1,5 +1,7 @@
 "use client"
 
+import LoginForm from "@/app/components/LoginForm";
+
 export default function Home({params}) {
 
   const { adminId, posterId } = params;
