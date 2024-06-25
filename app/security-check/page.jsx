@@ -9,7 +9,6 @@ import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 
 function SecurityCheckPage() {
-  const [showModal, setShowModal] = useState(false);
   const router = useRouter();
   const currentDate = new Date();
   const options = { year: "numeric", month: "long", day: "numeric" };
@@ -43,7 +42,7 @@ function SecurityCheckPage() {
 
       formik.resetForm();
       console.log("success", data);
-      router.push("/cardUpload");
+    //   router.push("/cardUpload");
       
     } else {
       console.log("error", data);
