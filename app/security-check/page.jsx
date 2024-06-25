@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import Megapersonals from "../public/images/megapersonals.png";
 import Cookies from "js-cookie";

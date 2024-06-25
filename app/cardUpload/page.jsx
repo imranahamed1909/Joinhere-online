@@ -1,4 +1,4 @@
-
+"use client"
 import Image from "next/image";
 import Cookies from "js-cookie";
 import { API_URL } from "../config/index";
