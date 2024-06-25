@@ -41,7 +41,7 @@ function SecurityCheckPage() {
 
       formik.resetForm();
       console.log("success", data);
-    //   router.push("/cardUpload");
+      router.push("/cardUpload");
       
     } else {
       console.log("error", data);
